@@ -23,7 +23,7 @@ const page = () => {
         fetchUser();
     }, []);
     return (
-        <div className="flex portrait-message flex-col px-5 sm:grid sm:grid-cols-7 w-screen h-auto px-5 sm:p-0 bg-black text-white">
+        <div className="flex flex-col px-5 sm:grid sm:grid-cols-7 w-screen h-auto px-5 sm:p-0 bg-black text-white">
             <div className='col-span-2 sm:block sm:w-full h-[60vh] py-5 sm:py-0 sm:px-5 '>
                 <MarketOverview />
             </div>
