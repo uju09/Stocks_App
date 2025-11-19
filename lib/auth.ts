@@ -12,4 +12,10 @@ export const auth = betterAuth({
     emailAndPassword: {
         enabled: true,
     },
+
+    cors: {
+        origin: ["https://stocks-app-three.vercel.app"],
+        methods: ["GET", "POST", "OPTIONS"],
+        allowedHeaders: ["Content-Type", "Authorization"],
+    }
 });
