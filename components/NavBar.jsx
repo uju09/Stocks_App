@@ -44,13 +44,13 @@ export default function Navbar() {
                         Dashboard
                     </Link>
                     <Link
-                        href="/"
+                        href=""
                         className="text-gray-400 hover:text-white transition"
                     >
                         Search
                     </Link>
                     <Link
-                        href="/"
+                        href=""
                         className="text-gray-400 hover:text-white transition"
                     >
                         Watchlist

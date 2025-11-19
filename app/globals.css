@@ -24,3 +24,25 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overscroll-behavior: none;
 }
+
+/* Hide dashboard when phone is in portrait */
+@media (orientation: portrait) {
+  .show-in-landscape {
+    display: none !important;
+  }
+
+  .portrait-message {
+    display: flex !important;
+  }
+}
+
+/* Show dashboard when phone is in landscape */
+@media (orientation: landscape) {
+  .show-in-landscape {
+    display: block !important;
+  }
+
+  .portrait-message {
+    display: none !important;
+  }
+}

@@ -17,8 +17,8 @@ function TopStories() {
           "colorTheme": "dark",
           "isTransparent": false,
           "locale": "en",
-          "width": 400,
-          "height": 550
+          "width": "100%",
+          "height": "100%"
         }`;
             container.current.appendChild(script);
         },

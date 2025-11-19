@@ -2,15 +2,15 @@
 import React, { useEffect, useRef, memo } from 'react';
 
 function MarketData() {
-    const container = useRef();
+  const container = useRef();
 
-    useEffect(
-        () => {
-            const script = document.createElement("script");
-            script.src = "https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js";
-            script.type = "text/javascript";
-            script.async = true;
-            script.innerHTML = `
+  useEffect(
+    () => {
+      const script = document.createElement("script");
+      script.src = "https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js";
+      script.type = "text/javascript";
+      script.async = true;
+      script.innerHTML = `
         {
           "colorTheme": "dark",
           "locale": "en",
@@ -19,8 +19,8 @@ function MarketData() {
           "showSymbolLogo": true,
           "backgroundColor": "#0F0F0F",
           "support_host": "https://www.tradingview.com",
-          "width": 1000,
-          "height": 550,
+          "width": "100%",
+          "height": "100%",
           "symbolsGroups": [
             {
               "name": "Indices",
@@ -124,16 +124,16 @@ function MarketData() {
             }
           ]
         }`;
-            container.current.appendChild(script);
-        },
-        []
-    );
+      container.current.appendChild(script);
+    },
+    []
+  );
 
-    return (
-        <div className="tradingview-widget-container" ref={container}>
-            <div className="tradingview-widget-container__widget"></div>
-        </div>
-    );
+  return (
+    <div className="tradingview-widget-container" ref={container}>
+      <div className="tradingview-widget-container__widget"></div>
+    </div>
+  );
 }
 
 export default memo(MarketData);
